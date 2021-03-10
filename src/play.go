@@ -17,6 +17,9 @@ func (game *Game) SwitchPlayers() {
 }
 
 func (game *Game) CheckMove(pos int) error {
+	if pos < 1 || pos > 9 {
+		return errors.New("try another move")
+	}
 	if game.board[pos-1] == "" {
 		game.board[pos-1] = game.player
 		game.SwitchPlayers()

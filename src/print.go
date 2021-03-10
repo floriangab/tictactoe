@@ -32,7 +32,7 @@ func PrintVictory(winner string) {
 
 func AskForPlay() int {
 	var moveInt int
-	fmt.Println("Enter Pos to play: ")
+	fmt.Println("Enter position to play: (1 to 9)")
 	fmt.Scan(&moveInt)
 	return moveInt
 }
